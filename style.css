@@ -1,17 +1,63 @@
 /* elemen selector */
 /* ref: colorhunt.co */
+/* mobile */
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: #8e7ab5;
 }
-/* class selector */
-.col {
-  width: 25%;
-  background-color: yellow;
-  float: left;
+
+/* css tablet */
+@media screen and (min-width: 600px) {
+  body {
+    background-color: yellow;
+  }
+
+  .col-sm-6 {
+    width: 50%;
+    float: left;
+  }
+
+  .col-12 {
+    width: 100%;
+    float: left;
+  }
+
+  .col-sm-12 {
+    width: 100%;
+    float: left;
+    background-color: yellow;
+  }
 }
+
+/* css desktop */
+@media screen and (min-width: 992px) {
+  body {
+    background-color: green;
+  }
+
+  .col {
+    width: 25%;
+    float: left;
+  }
+
+  .col-4 {
+    width: 33.33%;
+    float: left;
+  }
+
+  .col-lg-6 {
+    width: 50%;
+    float: left;
+  }
+}
+
+/* class selector */
 
 .img-responsive {
   width: 100%;
+  max-height: 400px;
 }
 
 .text-center {
@@ -31,11 +77,6 @@ body {
 }
 
 /* dosen si */
-.col-si {
-  width: 33.3%;
-  background-color: yellow;
-  float: left;
-}
 
 .row::after {
   content: "";
@@ -51,12 +92,9 @@ body {
 
 .col-3 {
   width: 66.67%;
-  background-color: yellow;
   float: left;
 }
 
-.col-4 {
-  width: 33.33%;
-  background-color: yellow;
-  float: left;
+.p-1 {
+  padding: 10px;
 }
